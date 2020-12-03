@@ -1,0 +1,8 @@
+1. make a variable that is only the domain of url, not the path. then 
+make a regex that replaces ./ with 
+"http://localhost/proxy?url=" + domain + "/";
+
+2. make a variable that removes the value after the last /, so 
+squid.gq/games/lighplay.html, would become squid.gq/games. then make a 
+regex that replaces a blank prefix with "http://localhost/proxy?url=" + 
+domain2 + /. but only if the " isn't followed by http.

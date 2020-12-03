@@ -1,0 +1,44 @@
+body
+{
+overflow: hidden;
+background-image: url("background.jpg");
+}
+.header
+{
+color: white;
+position: relative;
+left: 40%;
+margin-top: 15%;
+font-size: 3vw;
+font-family: Tahoma, Geneva, sans-serif;
+}
+.url
+{
+position: relative;
+left: 35%;
+top: 0;
+height: 5%;
+width: 20%;
+margin-top: 1%;
+font-size: 1.5vw;
+z-index: 2;
+}
+.submit
+{
+position: relative;
+width: 4%;
+font-size: 1.5vw;
+left: 35%;
+background: none;
+border: 1px solid white;
+color: white;
+}
+.corner
+{
+width: 3%;
+height: 3%;
+position: relative;
+float: left;
+margin-top: 26%;
+left: 1%;
+}
