@@ -30,7 +30,6 @@ fetch(url).then(function (res) {
 code = text;
 var str = url.split("."); 
 var type = str[str.length - 1];
-    req.getHeader()
 if(domain == url2) {
 res.setHeader("content-type", "text/html");
 } else {
