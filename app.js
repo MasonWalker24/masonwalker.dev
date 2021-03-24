@@ -41,6 +41,7 @@ res.setHeader("content-type", "text/html");
 res.setHeader("content-type", "text/" + type);
     }
 }
+    url2 = url2.split("?", 1);
 code = code.replace(/href=".\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
 code = code.replace(/href="/gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
 //code = code.replace(/href="\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
