@@ -25,9 +25,10 @@ find1 = /(href)="./gi;
 
 fetch(url).then(function (res) {
         return res.text();
-    res.catch();
-    }).then(function (text) {
+    
+    }).catch(error).then(function (text) {
 code = text;
+    console.log(error);
 var str = url.split("."); 
 var type = str[str.length - 1];
 if(domain == url2) {
