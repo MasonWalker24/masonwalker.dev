@@ -25,6 +25,7 @@ find1 = /(href)="./gi;
 
 fetch(url).then(function (res) {
         return res.text();
+    res.catch();
     }).then(function (text) {
 code = text;
 var str = url.split("."); 
