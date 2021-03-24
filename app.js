@@ -30,6 +30,7 @@ fetch(url).then(function (res) {
 code = text;
 var str = url.split("."); 
 var type = str[str.length - 1];
+    req.getHeader()
 if(domain == url2) {
 res.setHeader("content-type", "text/html");
 } else {
@@ -42,7 +43,7 @@ code = code.replace(/src="\//gi, 'src="http://carbon-proxy.herokuapp.com/proxy?u
 //code = code.replace(/src=".\//gi, 'src="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
 //code = code.replace(/url\("\//gi, 'url("http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
 //code = code.replace(/url\(".\//gi, 'url("http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
-            res.send(code);
+            res.send(domain + " " + url2);
 return;
     });
 });
