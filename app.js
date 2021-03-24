@@ -35,7 +35,7 @@ res.setHeader("content-type", "text/html");
 res.setHeader("content-type", "text/" + type);
 }
 code = code.replace(/href=".\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
-//code = code.//replace(/href="/gi, 'href="http://localhost/proxy?url=' + url2 + '/');
+code = code.//replace(/href="/gi, 'href="http://localhost/proxy?url=' + url2 + '/');
 //code = code.replace(/href="\//gi, 'href="http://localhost/proxy?url=' + url2 + '/');
 //code = code.replace(/src="\//gi, 'src="http://localhost/proxy?url=' + url2 + '/');
 //code = code.replace(/src=".\//gi, 'src="http://localhost/proxy?url=' + domain + '/');
