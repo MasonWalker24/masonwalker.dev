@@ -34,6 +34,7 @@ if(domain == url2) {
 res.setHeader("content-type", "text/html");
 } else {
 res.setHeader("content-type", "text/" + type);
+    res.send("doesn't match");
 }
 code = code.replace(/href=".\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
 code = code.replace(/href="/gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
