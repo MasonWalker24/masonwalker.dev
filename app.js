@@ -28,6 +28,8 @@ fetch(url).then(function (res) {
     
     }).then(function (text) {
 code = text;
+url = url.split("?", 1);
+    url = url.toString();
 var str = url.split("."); 
 var type = str[str.length - 1];
 if(domain == url2) {
