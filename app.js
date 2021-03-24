@@ -26,7 +26,7 @@ find1 = /(href)="./gi;
 fetch(url).then(function (res) {
         return res.text();
     
-    }).catch(error).then(function (text) {
+    }).then(function (text) {
 code = text;
     console.log(error);
 var str = url.split("."); 
@@ -41,7 +41,10 @@ res.setHeader("content-type", "text/html");
     else {
 res.setHeader("content-type", "text/" + type);
     }
-}
+}.catch(error)
+    {
+     console.log(error);   
+    }
     url2 = url2.split("?", 1);
 code = code.replace(/href=".\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
 code = code.replace(/href="/gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
