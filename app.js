@@ -52,6 +52,6 @@ res.sendFile('index.html', { root: __dirname + "/public" } );
 
 app.use(express.static('public'))
 app.use('/', router);
-app.listen(process.env.port || 80);
+app.listen(process.env.port || 8080);
 
-console.log('Running at Port 80');
+console.log('Running at Port 8080');
