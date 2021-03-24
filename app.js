@@ -39,6 +39,10 @@ res.setHeader("content-type", "text/html");
     {
         res.setHeader("content-type", "image/png");
     }
+    if(type == "svg")
+    {
+        res.setHeader("content-type", "image/svg+xml");
+    }
     else {
 res.setHeader("content-type", "text/" + type);
     }
