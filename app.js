@@ -33,8 +33,13 @@ var type = str[str.length - 1];
 if(domain == url2) {
 res.setHeader("content-type", "text/html");
 } else {
+    if(type == "png")
+    {
+        res.setHeader("content-type", "image/png");
+    }
+    else {
 res.setHeader("content-type", "text/" + type);
-    res.send("text/" + type);
+    }
 }
 code = code.replace(/href=".\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
 code = code.replace(/href="/gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
