@@ -17,15 +17,20 @@ let path2;
 
 app.get('/proxy', function(req, res){
     window.open("./" + path2,"_self");
-url = req.query.url;
-path = req.qeury.url;
+path2 = req.qeury.url;
 url2 = req.query.url;
 //num = url.indexOf("/");
 domain = url.split('/')[0];
 url = "https://" + url;
 find1 = /(href)="./gi;
-}
+)}
 app.get('/proxy/' + path2, function(req, res){
+    url = req.query.url;
+    url2 = req.query.url;
+//num = url.indexOf("/");
+domain = url.split('/')[0];
+url = "https://" + url;
+find1 = /(href)="./gi;
 fetch(url).then(function (res) {
         return res.text();
     
