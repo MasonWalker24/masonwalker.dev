@@ -13,9 +13,8 @@ let find1;
 let num;
 let test;
 let url2;
-let path;
 
-app.get('/proxy' + path, function(req, res){
+app.get('/proxy', function(req, res){
     
 url = req.query.url;
 url2 = req.query.url;
