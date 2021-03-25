@@ -30,21 +30,28 @@ url = url.split("?", 1);
     url = url.toString();
 var str = url.split("."); 
 var type = str[str.length - 1];
-if(domain == url2) {
-res.setHeader("content-type", "text/html");
-} else {
+
     if(type == "png")
     {
         res.setHeader("content-type", "image/png");
-    }
+    } else{
     if(type == "svg")
     {
         res.setHeader("content-type", "image/svg+xml");
+    } else
+    {
+        if (type == "css")
+        {
+         res.setHeader("content-type", "text/css");   
+        }
+        else {
+res.setHeader("content-type", "text/html");
+    } else
+    {
+        
     }
-    else {
-res.setHeader("content-type", "text/" + type);
     }
-}
+    }
 code = code.replace(/href=".\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
 code = code.replace(/href="(?!https:\/\/)/gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
 code = code.replace(/href="\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
