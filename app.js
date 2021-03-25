@@ -18,7 +18,7 @@ app.get('/proxy', function(req, res){
     
 url = req.query.url;
 url2 = req.query.url;
-num = url.indexOf("/");
+//num = url.indexOf("/");
 domain = url.split('/')[0];
 url = "https://" + url;
 find1 = /(href)="./gi;
