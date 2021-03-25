@@ -13,8 +13,13 @@ let find1;
 let num;
 let test;
 let url2;
+let path;
 
-app.get('/proxy', function(req, res){
+http.createServer(function (req, res) {
+   path = req.url;
+  res.end(); 
+}).listen(8080); 
+app.get('/' + path, function(req, res){
     
 url = req.query.url;
 url2 = req.query.url;
@@ -23,7 +28,7 @@ domain = url.split('/')[0];
 url = "https://" + url;
 find1 = /(href)="./gi;
 
-fetch(url).then(function (res) {
+fetch(path).then(function (res) {
         return res.text();
     
     }).then(function (text) {
@@ -68,7 +73,7 @@ res.sendFile('index.html', { root: __dirname + "/public" } );
 
 app.use(express.static('public'))
 app.use('/', router);
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
+//const PORT = process.env.PORT || 8080;
+//app.listen(PORT, () => {
+    //console.log(`Our app is running on port ${ PORT }`);
 });
