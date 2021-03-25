@@ -16,7 +16,7 @@ let url2;
 let path2;
 
 app.get('/proxy', function(req, res){
-    window.open("./" + path2,"_self")
+    window.open("./" + path2,"_self");
 url = req.query.url;
 path = req.qeury.url;
 url2 = req.query.url;
