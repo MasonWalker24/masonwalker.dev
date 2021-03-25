@@ -13,10 +13,8 @@ let find1;
 let num;
 let test;
 let url2;
-let path2;
 
 app.get('/proxy', function(req, res){
-path2 = req.qeury.url;
     url = req.query.url;
     url2 = req.query.url;
 //num = url.indexOf("/");
