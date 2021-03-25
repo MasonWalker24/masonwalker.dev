@@ -16,10 +16,7 @@ let url2;
 let path2;
 
 app.get('/proxy', function(req, res){
-    window.open("./" + path2,"_self");
 path2 = req.qeury.url;
-
-app.get('/proxy/' + path2, function(req, res){
     url = req.query.url;
     url2 = req.query.url;
 //num = url.indexOf("/");
