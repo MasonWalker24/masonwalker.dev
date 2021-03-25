@@ -50,7 +50,7 @@ res.setHeader("content-type", "text/" + type);
 code = code.replace(/href=".\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
 code = code.replace(/href="(?!https:\/\/)/gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
 code = code.replace(/href="\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
-    code = code.replace(/content="\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
+code = code.replace(/content="\//gi, 'content="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
 code = code.replace(/a href="https\:\/\/www./gi, 'a href="http://carbon-proxy.herokuapp.com/proxy?url=');
 code = code.replace(/src="\//gi, 'src="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
 //code = code.replace(/src=".\//gi, 'src="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
