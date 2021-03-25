@@ -46,10 +46,7 @@ var type = str[str.length - 1];
         }
         else {
 res.setHeader("content-type", "text/html");
-    } else
-    {
-        
-    }
+    } 
     }
     }
 code = code.replace(/href=".\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
