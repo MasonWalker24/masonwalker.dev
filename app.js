@@ -47,12 +47,10 @@ res.setHeader("content-type", "text/html");
 res.setHeader("content-type", "text/" + type);
     }
 }
-    url2 = url2.split("?", 1);
-    url2 = url2.toString();
 code = code.replace(/href=".\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
 code = code.replace(/href="(?!https:\/\/)/gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
 code = code.replace(/href="\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
-code = code.replace(/a href="http\s\:\/\/www./gi, 'a href="http://carbon-proxy.herokuapp.com/proxy?url=');
+code = code.replace(/a href="https\:\/\/www./gi, 'a href="http://carbon-proxy.herokuapp.com/proxy?url=');
 code = code.replace(/src="\//gi, 'src="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
 //code = code.replace(/src=".\//gi, 'src="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
 //code = code.replace(/url\("\//gi, 'url("http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
