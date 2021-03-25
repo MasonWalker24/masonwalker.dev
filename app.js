@@ -13,10 +13,10 @@ let find1;
 let num;
 let test;
 let url2;
-let path;
+let path2;
 
 app.get('/proxy', function(req, res){
-    window.open("./" + path,"_self")
+    window.open("./" + path2,"_self")
 url = req.query.url;
 path = req.qeury.url;
 url2 = req.query.url;
@@ -25,7 +25,7 @@ domain = url.split('/')[0];
 url = "https://" + url;
 find1 = /(href)="./gi;
 )}
-app.get('/proxy/' + path, function(req, res){
+app.get('/proxy/' + path2, function(req, res){
 fetch(url).then(function (res) {
         return res.text();
     
