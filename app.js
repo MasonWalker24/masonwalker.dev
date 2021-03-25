@@ -24,7 +24,7 @@ url2 = req.query.url;
 domain = url.split('/')[0];
 url = "https://" + url;
 find1 = /(href)="./gi;
-)}
+}
 app.get('/proxy/' + path2, function(req, res){
 fetch(url).then(function (res) {
         return res.text();
