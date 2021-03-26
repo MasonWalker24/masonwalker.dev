@@ -48,7 +48,7 @@ url = "https://" + url;
     test = "";
     for(let i = 0; i <= num - 1; i++)
     {
-     test = test + path2[i];
+     test = test + "/" + path2[i];
     }
     
 fetch(url).then(function (res) {
@@ -89,7 +89,7 @@ code = code.replace(/src="\//gi, 'src="http://carbon-proxy.herokuapp.com/proxy?u
 //code = code.replace(/src=".\//gi, 'src="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
 code = code.replace(/url\("\//gi, 'url("http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
 //code = code.replace(/url\(".\//gi, 'url("http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');      
-    res.send(path2);
+    res.send(test);
 return;
     });
 });
