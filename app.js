@@ -18,9 +18,27 @@ let url2;
 app.get('/proxy', function(req, res){
     url = req.query.url;
     url2 = req.query.url;
-num = url2;
-num = num.match(/\//g).length;
 
+    //count the number of /'s
+var string = url;
+var character = '/';
+var countObject = {} ; 
+
+function characterCount(word, character) {
+   var count = 0;
+    for (var i = 0; i < word.length; i++) {
+       if (word[i] === character) {
+           count++;
+       }
+  }
+  return count;
+}
+for (var i = 0, l = character.length; i < l; i++) {
+    var currentChar = character[i];
+    num = characterCount(string, currentChar);
+}
+    //end of count function
+    
 domain = url.split('/')[num];
 url = "https://" + url;
 find1 = /(href)="./gi;
@@ -62,7 +80,7 @@ code = code.replace(/src="\//gi, 'src="http://carbon-proxy.herokuapp.com/proxy?u
 //code = code.replace(/src=".\//gi, 'src="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
 code = code.replace(/url\("\//gi, 'url("http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
 //code = code.replace(/url\(".\//gi, 'url("http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');      
-    res.sendStatus(num);
+    res.send(num);
 return;
     });
 });
