@@ -67,7 +67,11 @@ function callback(){}
     if(type == "png")
     {
         res.setHeader("content-type", "image/png");
-        fs.writeFile(url, code, callback());
+        fs.readFile('readMe.txt', 'utf-8', function (err, data) {
+  fs.writeFile('writeMe.txt', data, function(err, result) {
+     if(err) console.log('error', err);
+   });
+ });
     } else{
     if(type == "svg")
     {
