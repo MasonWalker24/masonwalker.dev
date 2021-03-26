@@ -44,11 +44,10 @@ domain = url.split('/');
 url = "https://" + url;
     path2 = url2;
     path2 = path2.split('/', num);
-    test = path2;
     let count = 0;
     for(let i = 0; i <= num - 1; i++)
     {
-     path2 = path2 + test[i];
+     test = test + path2[i];
     }
     
 fetch(url).then(function (res) {
