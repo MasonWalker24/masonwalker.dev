@@ -81,15 +81,15 @@ res.setHeader("content-type", "text/html");
     } 
     }
     }
-code = code.replace(/href=".\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
+code = code.replace(/href=".\//gi, 'href="https://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
 code = code.replace(/href="(?!https:\/\/|\/)/gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
-code = code.replace(/href="\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
-code = code.replace(/content="\//gi, 'content="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
-code = code.replace(/action="\//gi, 'content="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
-code = code.replace(/a href="https\:\/\/www./gi, 'a href="http://carbon-proxy.herokuapp.com/proxy?url=');
-code = code.replace(/src="\//gi, 'src="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
+code = code.replace(/href="\//gi, 'href="https://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
+code = code.replace(/content="\//gi, 'content="https://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
+code = code.replace(/action="\//gi, 'content="https://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
+code = code.replace(/a href="https\:\/\/www./gi, 'a href="https://carbon-proxy.herokuapp.com/proxy?url=');
+code = code.replace(/src="\//gi, 'src="https://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
 //code = code.replace(/src=".\//gi, 'src="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
-code = code.replace(/url\("\//gi, 'url("http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
+code = code.replace(/url\("\//gi, 'url("https://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
 //code = code.replace(/url\(".\//gi, 'url("http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');      
     res.send(code);
 return;
