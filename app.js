@@ -41,6 +41,7 @@ for (var i = 0, l = character.length; i < l; i++) {
     //end of count function
     
 domain = url.split('/');
+    domain = domain[0];
 url = "https://" + url;
     path2 = url2;
     path2 = path2.split('/', num);
