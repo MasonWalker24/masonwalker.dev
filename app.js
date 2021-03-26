@@ -80,7 +80,8 @@ code = code.replace(/src="\//gi, 'src="http://carbon-proxy.herokuapp.com/proxy?u
 //code = code.replace(/src=".\//gi, 'src="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
 code = code.replace(/url\("\//gi, 'url("http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
 //code = code.replace(/url\(".\//gi, 'url("http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');      
-    res.write(num);
+    String(num);
+    res.send(num);
 return;
     });
 });
