@@ -45,11 +45,11 @@ url = "https://" + url;
     path2 = url2;
     path2 = path2.split('/', num);
     test = path2;
-    
-    for(var i = 0; i <= num - 1;)
+    let count = 0;
+    for(var i = 0; i <= num - 1; i++)
     {
-     path2 = test[i];
-        i++;
+     path2 = test[count];
+        count++
     }
     
 fetch(url).then(function (res) {
