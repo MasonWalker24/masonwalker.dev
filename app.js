@@ -44,7 +44,7 @@ domain = url.split('/');
 url = "https://" + url;
 find1 = /(href)="./gi;
     path2 = url2;
-    path2 = path2.split('/', num);
+    path2 = path2.split('/', num)[:num];
 fetch(url).then(function (res) {
         return res.text();
     
