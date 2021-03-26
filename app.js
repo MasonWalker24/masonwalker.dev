@@ -18,7 +18,10 @@ let url2;
 app.get('/proxy', function(req, res){
     url = req.query.url;
     url2 = req.query.url;
-num = url.indexOf("/");
+num = url2;
+
+  var num = num.match(/\//g).length;
+
 domain = url.split('/')[num];
 url = "https://" + url;
 find1 = /(href)="./gi;
@@ -27,9 +30,6 @@ fetch(url).then(function (res) {
     
     }).then(function (text) {
 code = text;
-    path2 = url2;
-    path2.split('/')
-path2.split('/').length - 1;
 url = url.split("?", 1);
     url = url.toString();
 var str = url.split("."); 
