@@ -45,7 +45,7 @@ url = "https://" + url;
 find1 = /(href)="./gi;
     path2 = url2;
     path2 = path2.split('/', num);
-    path2 = path2.join()[num - 1];
+    path2 = path2.join()[2];
 fetch(url).then(function (res) {
         return res.text();
     
