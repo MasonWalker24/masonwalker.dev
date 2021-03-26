@@ -49,7 +49,7 @@ url = "https://" + url;
     for(var i = 0; i <= num - 1; i++)
     {
      path2 = test[count];
-        count++
+        count++;
     }
     
 fetch(url).then(function (res) {
