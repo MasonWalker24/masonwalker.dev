@@ -42,10 +42,14 @@ for (var i = 0, l = character.length; i < l; i++) {
     
 domain = url.split('/');
 url = "https://" + url;
-find1 = /(href)="./gi;
     path2 = url2;
     path2 = path2.split('/', num);
-    path2 = path2[2];
+    test = path2;
+    for(var i = 0; var i <= num - 1)
+    {
+     path2 = test[i];
+        i++;
+    }
 fetch(url).then(function (res) {
         return res.text();
     
