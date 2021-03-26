@@ -19,8 +19,7 @@ app.get('/proxy', function(req, res){
     url = req.query.url;
     url2 = req.query.url;
 num = url2;
-
-  var num = num.match(/\//g).length;
+num = num.match(/\//g).length;
 
 domain = url.split('/')[num];
 url = "https://" + url;
