@@ -47,7 +47,7 @@ url = "https://" + url;
     let count = 0;
     for(let i = 0; i <= num - 1; i++)
     {
-     test = test + path2[i];
+     test = test + "/" + path2[i];
     }
     
 fetch(url).then(function (res) {
