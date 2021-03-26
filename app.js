@@ -6,7 +6,6 @@ const router = express.Router();
 const fetch = require('node-fetch');
 const http = require('http');
 const https = require('https');
-const fs = require(fs);
 
 let url;
 let code;
@@ -63,7 +62,7 @@ url = url.split("?", 1);
     url = url.toString();
 var str = url.split("."); 
 var type = str[str.length - 1];
-
+const fs = require(fs);
     if(type == "png")
     {
         res.setHeader("content-type", "image/png");
