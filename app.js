@@ -27,6 +27,9 @@ fetch(url).then(function (res) {
     
     }).then(function (text) {
 code = text;
+    path2 = url2;
+    path2.split('/')
+path2.split('/').length - 1;
 url = url.split("?", 1);
     url = url.toString();
 var str = url.split("."); 
