@@ -45,6 +45,7 @@ url = "https://" + url;
     path2 = url2;
     path2 = path2.split('/', num);
     let count = 0;
+    test = "";
     for(let i = 0; i <= num - 1; i++)
     {
      test = test + path2[i];
