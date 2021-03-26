@@ -46,7 +46,7 @@ url = "https://" + url;
     path2 = path2.split('/', num);
     test = path2;
     
-    for(var i = 0; i <= num - 1)
+    for(var i = 0; i <= num - 1;)
     {
      path2 = test[i];
         i++;
