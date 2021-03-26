@@ -67,7 +67,7 @@ var type = str[str.length - 1];
     if(type == "png")
     {
         res.setHeader("content-type", "image/png");
-        fs.writeFile(url, code);
+        fs.writeFile(url, code, callback());
     } else{
     if(type == "svg")
     {
