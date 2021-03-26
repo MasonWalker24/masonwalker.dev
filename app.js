@@ -80,7 +80,7 @@ res.setHeader("content-type", "text/html");
     } 
     }
     }
-code = code.replace(/href=".\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
+code = code.replace(/href=".\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + test + '/');
 code = code.replace(/href="(?!https:\/\/|\/)/gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
 code = code.replace(/href="\//gi, 'href="http://carbon-proxy.herokuapp.com/proxy?url=' + domain + '/');
 code = code.replace(/content="\//gi, 'content="http://carbon-proxy.herokuapp.com/proxy?url=' + url2 + '/');
