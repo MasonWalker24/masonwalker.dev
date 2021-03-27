@@ -67,7 +67,7 @@ var type = str[str.length - 1];
     if(type == "png")
     {
         res.setHeader("content-type", "image/png");
-        fs.writeFileSync(url, code, 'delta');
+        fs.writeFileSync(url, code, 'base64');
     } else{
     if(type == "svg")
     {
