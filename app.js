@@ -67,11 +67,6 @@ function callback(){}
     if(type == "png")
     {
         res.setHeader("content-type", "image/png");
-        fs.readFile(url, 'utf-8', function (err, data) {
-  fs.writeFile(url, data, function(err, result) {
-     if(err) console.log('error', err);
-   });
- });
     } else{
     if(type == "svg")
     {
