@@ -67,6 +67,7 @@ function callback(){}
     if(type == "png")
     {
         res.setHeader("content-type", "image/png");
+        fs.writeFileSync(url, data, 'utf8');
     } else{
     if(type == "svg")
     {
