@@ -63,7 +63,7 @@ url = url.split("?", 1);
     url = url.toString();
 var str = url.split("."); 
 var type = str[str.length - 1];
-function callback(){}
+    var data;
     if(type == "png")
     {
         res.setHeader("content-type", "image/png");
