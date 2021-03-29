@@ -66,7 +66,7 @@ var type = str[str.length - 1];
     var data;
     if(type == "png")
     {
-        res.setHeader("content-type", "image/png; charset=delta");
+        res.setHeader("content-type", "image/png");
         
     } else{
     if(type == "svg")
