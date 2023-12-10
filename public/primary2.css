@@ -52,5 +52,6 @@ width: 100%;
 background-color: black;
 top: 0;
 left: 0;
-opacity: 50%;
+opacity: 65%;
+border-bottom: 50px solid #001e30;
 }
