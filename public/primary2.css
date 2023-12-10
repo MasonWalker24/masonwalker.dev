@@ -46,7 +46,7 @@ left: 1%;
 }
 .navbar
 {
-  position: relative;
+  position: fixed;
   height: 10%;
   width: 100%;
   background-color: black;
