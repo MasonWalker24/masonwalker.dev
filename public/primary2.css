@@ -59,7 +59,7 @@ border-bottom: 0.3vw solid #001e30;
 {
 position: fixed;
 background: none;
-opacity: 0%;
+opacity: 100%;
 width: 10%;
 height: 10%;
 }
