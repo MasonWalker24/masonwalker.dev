@@ -58,8 +58,8 @@ border-bottom: 0.3vw solid #001e30;
 .navlogo
 {
 position: fixed;
-background-color: black;
+background: none;
 opacity: 0%;
-width: 15%;
-height: 100%;
+width: 10%;
+height: 10%;
 }
