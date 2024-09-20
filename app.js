@@ -21,6 +21,7 @@ let resHeaders;
 app.get('/carbonproxy', function(req, res) {
   res.sendFile('carbonproxy.html', { root: __dirname + "/CarbonProxy" } );
 });
+app.use(express.static('CarbonProxy'));
 app.get('/proxy', function(req, res) {
   url = req.query.url;
   domain = url.split("/")[0];
