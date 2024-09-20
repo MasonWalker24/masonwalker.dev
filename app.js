@@ -7,50 +7,62 @@ res.sendFile('index.html', { root: __dirname + "/public" } );
 });
 //CarbonProxy Stuff
 
+const querystring = require('querystring');
 const path = require('path');
 const fetch = require('node-fetch');
-const fs = require('fs');
 const http = require('http');
 const https = require('https');
-
+const fs = require('fs');
 let url;
 let code;
-let domain;
-let find1;
-let num;
-let test;
-let url2;
+let domain
+let pageType;
+let resHeaders;
 
-app.get('/proxy', function(req, res){
+app.get('/proxy', function(req, res) {
+  url = req.query.url;
+  domain = url.split("/")[0];
+
+  pageType = url.split(".");
+  let length = pageType.length;
+  pageType = pageType[length-1];
+
+  url = "https://" + url;
+
+  //const myHeaders = new fetch.Headers();
+
+  fetch(url).then(function(res) {
+    resHeaders = res.headers.get('content-type');
+    return res.text();
+
+  }).then(function(text) {
+    code = text;
+
+      //console.log(resHeaders.toString());
     
-url = req.query.url;
-url2 = req.query.url;
-num = url.indexOf("/");
-domain = url.split('/')[0];
-url = "https://" + url;
-find1 = /(href)="./gi;
-
-fetch(url).then(function (res) {
-        return res.text();
-    }).then(function (text) {
-code = text;
-var str = url.split("."); 
-var type = str[str.length - 1];
-if(domain == url2) {
-res.setHeader("content-type", "text/html");
-} else {
-res.setHeader("content-type", "text/" + type);
-}
-code = code.replace(/href=".\//gi, 'href="http://localhost/proxy?url=' + domain + '/');
-code = code.//replace(/href="/gi, 'href="http://localhost/proxy?url=' + url2 + '/');
-code = code.replace(/href="\//gi, 'href="http://localhost/proxy?url=' + url2 + '/');
-code = code.replace(/src="\//gi, 'src="http://localhost/proxy?url=' + url2 + '/');
-code = code.replace(/src=".\//gi, 'src="http://localhost/proxy?url=' + domain + '/');
-code = code.replace(/url\("\//gi, 'url("http://localhost/proxy?url=' + url2 + '/');
-code = code.replace(/url\(".\//gi, 'url("http://localhost/proxy?url=' + domain + '/');
-            res.send(code);
-return;
-    });
+    //set headers
+    res.setHeader('content-type', resHeaders);
+    //replacements
+    //href
+        code = code.replace(/(?<!\/)href="\//g, 'href="/proxy?url=' + domain + "/"); 
+    code = code.replace(/href=".\//g, 'href="/proxy?url=');
+    code = code.replace(/href="(?=\w)(?!http)/g, 'href="/proxy?url=' + domain + "/");
+    code = code.replace(/href="https:\/\//g, 'href="/proxy?url=');
+    //src
+    code = code.replace(/(?<!\/)src="\//g, 'src="/proxy?url=' + domain + "/"); 
+    code = code.replace(/src=".\//g, 'src="/proxy?url=');
+    code = code.replace(/src="(?=\w)(?!http)/g, 'src="/proxy?url=' + domain + "/");
+    code = code.replace(/src="https:\/\//g, 'src="/proxy?url=');
+    //action
+    code = code.replace(/(?<!\/)action="\//g, 'action="/proxy?url=' + domain + "/"); 
+    code = code.replace(/action=".\//g, 'action="/proxy?url=');
+    code = code.replace(/action="(?=\w)(?!http)/g, 'action="/proxy?url=' + domain + "/");
+    code = code.replace(/action="https:\/\//g, 'action="/proxy?url=');
+    
+    //console.log(code);
+    res.send(code);
+    return;
+  });
 });
 
 //End CarbonProxy Stuff
