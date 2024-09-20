@@ -1,8 +1,6 @@
 body
 {
 overflow: hidden;
-background-image: url("background.jpg");
-background-repeat: no-repeat;
 background-size: 100%, 100%;
 }
 .header
@@ -58,6 +56,16 @@ border-bottom: 0.3vw solid #001e30;
 .navlogo
 {
   position: fixed;
+  background: none;
+  opacity: 100%;
+  width: 10%;
+  height: 10%;
+  color: white;
+  text-decoration: none;
+}
+.navlogo
+{
+  position: absolute;
   background: none;
   opacity: 100%;
   width: 10%;
