@@ -18,7 +18,9 @@ let code;
 let domain
 let pageType;
 let resHeaders;
-
+app.get('/carbonproxy', function(req, res) {
+  res.sendFile('carbonproxy.html', { root: __dirname + "/carbonproxy" } );
+});
 app.get('/proxy', function(req, res) {
   url = req.query.url;
   domain = url.split("/")[0];
