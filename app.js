@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const router = express.Router();
-
+//testing if properly connected
 app.get('/', function(req, res){
 res.sendFile('index.html', { root: __dirname + "/public" } );
 });
